@@ -1,0 +1,23 @@
+.clients {
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__link {
+    @include centerFlex();
+    @include transition(border-color, fill);
+
+    width: 170px;
+    height: 92px;
+    border: 1px solid $icon-cl;
+    border-radius: 4px;
+    fill: $icon-cl;
+
+    &:hover,
+    &:focus {
+      border-color: $btn-cl;
+      fill: $btn-cl;
+    }
+  }
+}

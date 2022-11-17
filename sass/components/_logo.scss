@@ -1,0 +1,17 @@
+.logo {
+  margin-right: 93px;
+
+  font-family: $secondary-font-family;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $logo-txt-cl;
+
+  span{
+    color: $btn-cl;
+  }
+}
+
+// .logo span {
+//   color: var(--btn-color);
+// }
