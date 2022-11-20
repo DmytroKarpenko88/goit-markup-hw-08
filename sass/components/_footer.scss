@@ -1,56 +1,87 @@
 .footer {
   padding: 60px 0;
   background-color: $main-footer-background-cl;
+}
+.footer__container {
+  align-items: baseline;
 
-  &__container {
+  @media screen and (min-width: 1200px) {
     display: flex;
-    align-items: baseline;
   }
+}
 
-  &__content {
+.footer__content {
+  @media screen and (min-width: 1200px) {
     margin-right: 70px;
   }
+}
 
-  &__content a {
-    color: $secondary-txt-cl;
-    @include transition(color);
+.footer__logo {
+  color: $secondary-txt-cl;
+
+  @media screen and (max-width: 1199px) {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    font-size: 24px;
+    line-height: calc(28 / 24);
   }
+}
 
-  &__title {
-    font-weight: 700;
-    line-height: calc(16 / 14);
-    text-transform: uppercase;
-    color: $secondary-txt-cl;
-    margin-bottom: 20px;
+.footer__title {
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  color: $secondary-txt-cl;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
   }
+}
 
-  &__social .social-links__item {
-    fill: $secondary-txt-cl;
-    background-color: $icon-bg-cl;
+.footer__social {
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
   }
+}
+.footer__social .social-links__item {
+  fill: $secondary-txt-cl;
+  background-color: $icon-bg-cl;
+}
 
-  &__social .social-links__item:hover,
-  &__social .social-links__item:focus {
-    background-color: $btn-cl;
+.footer__social .social-links__item:hover,
+.footer__social .social-links__item:focus {
+  background-color: $btn-cl;
+}
+
+.footer__subscribe {
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
   }
+  margin-left: auto;
+}
 
-  &__subscribe {
-    margin-left: auto;
-  }
+.footer__form {
+  text-align: center;
 
-  &__form {
+  @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
     position: relative;
 
     .btn {
-      display: flex;
       margin: 0;
-      min-width: 200px;
-      padding-left: 28px;
-      padding-right: 28px;
       margin-left: 12px;
     }
+  }
+  .btn {
+    display: flex;
+    margin: 20px auto 0;
+    min-width: 200px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 }
 
@@ -58,6 +89,16 @@
   margin-top: 20px;
   font-style: normal;
   line-height: calc(24 / 14);
+
+  @include transition(color);
+
+  .actual-address__link {
+    color: $secondary-txt-cl;
+  }
+
+  @media screen and (max-width: 1200px) {
+    text-align: center;
+  }
 
   &__link {
     margin-top: 9px;
@@ -73,7 +114,7 @@
 }
 
 .sub-input {
-  width: 358px;
+  width: calc(100% - 30px);
   height: 50px;
 
   padding: 15px 16px;
@@ -85,6 +126,10 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 
 .icon-send {

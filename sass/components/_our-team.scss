@@ -2,8 +2,10 @@
   background-color: $section-background-cl;
 
   .list {
-    display: flex;
-    column-gap: 30px;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      column-gap: 30px;
+    }
   }
 
   .item {

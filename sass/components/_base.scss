@@ -30,11 +30,6 @@ img {
   height: auto;
 }
 
-address {
-  /* or .footer-address */
-  font-style: normal;
-}
-
 button {
   display: block;
   cursor: pointer;
@@ -43,10 +38,15 @@ button {
 }
 
 .section {
-  /* outline: 2px solid red; */
+  outline: 2px solid red;
 
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .list {
@@ -55,8 +55,11 @@ button {
 }
 
 .wrapper {
-  display: flex;
   align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .title {

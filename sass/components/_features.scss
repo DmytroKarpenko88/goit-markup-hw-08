@@ -1,7 +1,10 @@
 .features {
-  padding-bottom: 0;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+  }
 
   .thums {
+    // display: block;
     display: flex;
     justify-content: center;
     padding: 25px 100px;
@@ -9,17 +12,32 @@
     margin-bottom: 30px;
   }
 
+  @media screen and (min-width: 1200px) {
+  }
+
   &__list {
-    display: flex;
-    column-gap: 30px;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      column-gap: 30px;
+    }
   }
 
   .item {
-    max-width: 270px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      max-width: 270px;
+    }
   }
 }
 
 .feature__title {
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+
   margin-bottom: 10px;
 
   font-weight: 700;
