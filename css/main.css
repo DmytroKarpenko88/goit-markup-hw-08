@@ -701,6 +701,15 @@ button {
 .footer__form {
   text-align: center;
 }
+.footer__form .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px auto 0;
+  min-width: 200px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
 @media screen and (min-width: 1200px) {
   .footer__form {
     display: -webkit-box;
@@ -715,15 +724,6 @@ button {
     margin: 0;
     margin-left: 12px;
   }
-}
-.footer__form .btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 20px auto 0;
-  min-width: 200px;
-  padding-left: 28px;
-  padding-right: 28px;
 }
 
 .address {
