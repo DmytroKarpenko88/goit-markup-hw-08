@@ -5,7 +5,7 @@
 .footer__container {
   align-items: baseline;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     display: flex;
   }
 }
@@ -73,7 +73,7 @@
     padding-left: 28px;
     padding-right: 28px;
   }
-  
+
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
@@ -84,7 +84,6 @@
       margin-left: 12px;
     }
   }
-  
 }
 
 .address {

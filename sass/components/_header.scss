@@ -8,7 +8,9 @@
   }
 
   .item:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (min-width: 768px) {
+      margin-right: 50px;
+    }
   }
 }
 
@@ -72,5 +74,40 @@
 
   .icon {
     margin-right: 10px;
+  }
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.mobile-menu {
+  @include centerFlex(flex);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
   }
 }

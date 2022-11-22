@@ -38,15 +38,13 @@ button {
 }
 
 .section {
-  outline: 2px solid red;
-
-  padding-top: 60px;
-  padding-bottom: 60px;
-
-  @media screen and (min-width: 1200px) {
-    padding-top: 94px;
-    padding-bottom: 94px;
+  // outline: 2px solid red;
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .list {
@@ -57,7 +55,7 @@ button {
 .wrapper {
   align-items: center;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     display: flex;
   }
 }

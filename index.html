@@ -22,7 +22,21 @@
     <header class="header">
       <div class="container wrapper">
         <nav class="wrapper">
-          <a class="logo" href="./index.html"><span>Web</span>Studio</a>
+          <div class="mobile-menu">
+            <a class="logo" href="./index.html"><span>Web</span>Studio</a>
+            <button
+              class="menu-button js-open-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              type="button"
+              data-menu-button
+            >
+              <svg width="40" height="40" aria-label="mobile menu switcher">
+                <use class="icon-menu" href="./images/icons.svg#icon-menu-40px"></use>
+                <use class="icon-close" href="./images/icons.svg#close-40px"></use>
+              </svg>
+            </button>
+          </div>
 
           <ul class="links-nav list wrapper">
             <li class="item"><a class="header__link current" href="./index.html">Студія</a></li>
@@ -481,6 +495,8 @@
       </div>
     </footer>
 
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

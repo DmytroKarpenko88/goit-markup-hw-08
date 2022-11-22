@@ -1,13 +1,9 @@
 .container {
-  // outline: 2px solid rgb(47, 89, 255);
+  outline: 2px solid rgb(47, 89, 255);
 
-  width: 414px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-
-  // @media screen and (min-width: 480px) {
-  //   width: 480;
-  // }
 
   @media screen and (min-width: 480px) {
     width: 480px;

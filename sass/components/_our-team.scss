@@ -2,9 +2,10 @@
   background-color: $section-background-cl;
 
   .list {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 768px) {
       display: flex;
-      column-gap: 30px;
+      flex-wrap: wrap;
+      gap: 30px;
     }
   }
 

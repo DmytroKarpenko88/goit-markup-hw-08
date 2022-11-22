@@ -60,14 +60,13 @@ button {
 }
 
 .section {
-  outline: 2px solid red;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -81,7 +80,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -98,7 +97,8 @@ button {
 }
 
 .container {
-  width: 414px;
+  outline: 2px solid rgb(47, 89, 255);
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -126,8 +126,10 @@ button {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.header .item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .header .item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .links-nav .header__link {
@@ -194,6 +196,49 @@ button {
   margin-right: 10px;
 }
 
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
 .logo {
   margin-right: 93px;
   font-family: "Raleway", sans-serif;
@@ -292,19 +337,30 @@ button {
   background-color: #f5f4fa;
   margin-bottom: 30px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .features__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-column-gap: 30px;
-       -moz-column-gap: 30px;
-            column-gap: 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 @media screen and (max-width: 767px) {
   .features .item {
     margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features .item {
+    max-width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -368,14 +424,14 @@ button {
 .our-team {
   background-color: #f5f4fa;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .our-team .list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-column-gap: 30px;
-       -moz-column-gap: 30px;
-            column-gap: 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
   }
 }
 .our-team .item {
@@ -498,21 +554,27 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px 8px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-bottom: 50px;
 }
-.filters-btn .item:not(:last-child) {
-  margin-right: 8px;
+@media screen and (min-width: 768px) {
+  .filters-btn {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .filter-btn {
   display: block;
-  padding: 6px 22px;
+  padding: 6px 25px;
   /* min-width: 130px; */
   font-family: inherit;
   font-weight: 500;
@@ -633,7 +695,7 @@ button {
       -ms-flex-align: baseline;
           align-items: baseline;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -809,6 +871,15 @@ button {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 95%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+    overflow: scroll;
+  }
 }
 
 .btn-close {
