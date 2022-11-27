@@ -518,6 +518,16 @@ button {
         flex-wrap: nowrap;
   }
 }
+@media screen and (max-width: 767px) {
+  .clients__item {
+    width: calc(50% - 15px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc(33.3333333333% - 20px);
+  }
+}
 .clients__link {
   display: Flex;
   -webkit-box-align: center;
@@ -532,20 +542,14 @@ button {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  width: 177px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .clients__link {
-    width: 210px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .clients__link {
-    width: 226px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1005,6 +1009,12 @@ button {
   line-height: 1.7142857143;
   letter-spacing: 0.03em;
   color: #757575;
+}
+@media screen and (max-width: 1199px) {
+  .form__field-check {
+    font-size: 12px;
+    line-height: 1.1666666667;
+  }
 }
 .form__field-check .form__link {
   color: #2196f3;
