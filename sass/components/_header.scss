@@ -15,6 +15,9 @@
 }
 
 .links-nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   .header__link {
     color: $main-txt-cl;
     @include transition(color);
@@ -49,6 +52,9 @@
 }
 
 .header__contacts {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   margin-left: auto;
 
   .header__link {
@@ -98,16 +104,8 @@
   display: none;
 }
 
-.mobile-menu {
-  @include centerFlex(flex);
-}
-
 @media screen and (min-width: 768px) {
   .menu-button {
     display: none;
-  }
-
-  .mobile-menu {
-    display: block;
   }
 }
