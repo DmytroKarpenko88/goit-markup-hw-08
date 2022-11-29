@@ -1,14 +1,51 @@
 .hero {
+  margin: 0 auto;
+  padding: 118px 0;
+  height: 400px;
+
   background-color: rgba(47, 48, 58, 0.4);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/bg-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  margin: 0 auto;
-  padding: 118px 0;
-  height: 400px;
+  // mobile screen
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/bg_mob@1x.jpg);
+
+  // mobile screen retina
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/bg_mob@2x.jpg);
+  }
+
+  // tablet screen
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/bg_tab@1x.jpg);
+
+    // tablet screen retina
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/bg_tab@2x.jpg);
+    }
+  }
+  // desktop screen
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/bg_desk@1x.jpg);
+
+    // desktop screen retina
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/bg_desk@2x.jpg);
+    }
+  }
 
   max-width: 1600px;
   @media screen and (min-width: 1200px) {
@@ -33,7 +70,7 @@
     @media screen and (min-width: 1200px) {
       width: 696px;
       font-size: 44px;
-      line-height: 1.36;
+      line-height: calc(60 / 44);
     }
   }
 }

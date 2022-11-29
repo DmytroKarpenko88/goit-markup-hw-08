@@ -9,3 +9,25 @@
   transition-duration: #{$duration};
   transition-timing-function: #{$timing-function};
 }
+
+/**
+  |============================
+  | Mixin for media query
+  |============================
+*/
+$breakpoints: (
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1200px,
+);
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: calc($width - 1px);
+    }
+    @media screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
