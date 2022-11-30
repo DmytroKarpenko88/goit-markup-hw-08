@@ -7,10 +7,19 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include mq(desktop) {
+    flex-wrap: nowrap;
   }
 }
 
 .footer__content {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: 50%;
+  }
+
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
   }
@@ -42,6 +51,10 @@
 }
 
 .footer__social {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: 50%;
+  }
+
   @media screen and (max-width: 1199px) {
     margin-top: 60px;
   }
@@ -57,9 +70,17 @@
 }
 
 .footer__subscribe {
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: 100%;
+    max-width: 450px;
+
+    margin-right: auto;
+  }
+
+  @include mq(desktop, max) {
     margin-top: 60px;
   }
+
   margin-left: auto;
 }
 
@@ -74,7 +95,7 @@
     padding-right: 28px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     display: flex;
     align-items: center;
     position: relative;

@@ -3,8 +3,11 @@
 
   &__link {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+
+    @include mq(tablet) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
   }
 
   .item:not(:last-child) {
@@ -52,9 +55,15 @@
 }
 
 .header__contacts {
-  @media screen and (max-width: 767px) {
+  @include mq(tablet, max) {
     display: none;
   }
+
+  @include mq(desktop) {
+    display: flex;
+    gap: 30px;
+  }
+
   margin-left: auto;
 
   .header__link {
@@ -66,9 +75,20 @@
     @include transition(color);
     fill: currentColor;
 
+    @include mq(desktop, max) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
     &:hover,
     &:focus {
       color: $btn-cl;
+    }
+  }
+
+  .mail {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 10px;
     }
   }
 
