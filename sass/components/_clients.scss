@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       flex-wrap: nowrap;
     }
   }
@@ -12,7 +12,7 @@
     @media screen and (max-width: 767px) {
       width: calc(100% / 2 - 15px);
     }
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       width: calc(100% / 3 - 20px);
     }
   }
@@ -27,10 +27,10 @@
     border-radius: 4px;
     fill: $icon-cl;
 
-    @media screen and (max-width: 1199px) {
+    @include mq(desktop, max) {
       width: 100%;
     }
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       width: 170px;
     }
 

@@ -7,13 +7,13 @@
   padding-top: 16px;
   padding-bottom: 16px;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     margin-right: 88px;
     padding-top: 26px;
     padding-bottom: 26px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     margin-right: 93px;
     font-size: 26px;
     line-height: calc(31 / 26);

@@ -696,6 +696,16 @@ button {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 768px) {
+  .projects .box {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects .box {
+    max-width: 370px;
+  }
+}
 .projects__link {
   color: #212121;
   -webkit-transition-property: -webkit-box-shadow;

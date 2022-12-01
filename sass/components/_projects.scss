@@ -3,6 +3,16 @@
   flex-wrap: wrap;
   gap: 30px;
 
+  .box {
+    @include mq(tablet) {
+      max-width: 354px;
+    }
+
+    @include mq(desktop) {
+      max-width: 370px;
+    }
+  }
+
   @include transition(box-shadow);
 
   &__link {
