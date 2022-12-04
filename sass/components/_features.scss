@@ -24,8 +24,10 @@
   }
 
   .item {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 30px;
+    @include mq(tablet, max) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
 
     @include mq(tablet) {
@@ -39,7 +41,7 @@
 }
 
 .feature__title {
-  @media screen and (max-width: 768px) {
+  @include mq(tablet, max) {
     text-align: center;
   }
 

@@ -113,6 +113,11 @@
 .mobile-socials {
   display: flex;
 
+  @media screen and (max-width: 400px) {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
   .link {
     font-size: 18px;
     line-height: calc(22 / 18);

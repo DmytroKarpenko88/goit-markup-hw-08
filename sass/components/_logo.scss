@@ -9,8 +9,8 @@
 
   @include mq(tablet) {
     margin-right: 88px;
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   @include mq(desktop) {

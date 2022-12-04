@@ -92,9 +92,15 @@ button {
 .title {
   margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.1666666667;
   text-align: center;
+  font-size: 28px;
+  line-height: 1.1785714286;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 36px;
+    line-height: 1.1666666667;
+  }
 }
 
 .container {
@@ -268,8 +274,8 @@ button {
 @media screen and (min-width: 768px) {
   .logo {
     margin-right: 88px;
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -334,7 +340,6 @@ button {
   }
 }
 .hero__title {
-  width: 360px;
   font-size: 26px;
   line-height: 1.6153846154;
   margin: 0 auto;
@@ -343,7 +348,11 @@ button {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-  max-width: 480px;
+}
+@media screen and (max-width: 1199px) {
+  .hero__title {
+    max-width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -418,7 +427,7 @@ button {
   }
 }
 @media screen and (max-width: 767px) {
-  .features .item {
+  .features .item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -440,7 +449,7 @@ button {
   line-height: 1.1428571429;
   text-transform: uppercase;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .feature__title {
     text-align: center;
   }
@@ -718,6 +727,18 @@ button {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .projects__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+}
 .projects__link:hover, .projects__link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -735,6 +756,13 @@ button {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project__description {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 .project__title {
   display: block;
@@ -843,7 +871,7 @@ button {
         flex-basis: 50%;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer__social {
     margin-top: 60px;
   }
@@ -1274,6 +1302,13 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media screen and (max-width: 400px) {
+  .mobile-socials {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 10px;
+  }
 }
 .mobile-socials .link {
   font-size: 18px;

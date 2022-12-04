@@ -45,7 +45,7 @@
   color: $secondary-txt-cl;
   margin-bottom: 20px;
 
-  @media screen and (max-width: 1199px) {
+  @include mq(desktop, max) {
     text-align: center;
   }
 }
@@ -55,7 +55,7 @@
     flex-basis: 50%;
   }
 
-  @media screen and (max-width: 1199px) {
+  @include mq(tablet, max) {
     margin-top: 60px;
   }
 }
